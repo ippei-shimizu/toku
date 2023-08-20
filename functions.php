@@ -6,6 +6,9 @@ function my_theme_styles_and_scripts() {
 
     $version = filemtime(get_template_directory() . '/js/common.js');
     wp_enqueue_script('my-script', get_template_directory_uri() . '/js/common.js', array(), $version, true);
+
+    $version = filemtime(get_template_directory() . '/js/top.js');
+    wp_enqueue_script('top-script', get_template_directory_uri() . '/js/top.js', array(), $version, true);
   }
 }
 

@@ -20,7 +20,7 @@
     <nav class="header__nav">
       <ul>
         <li><a href="<?php echo esc_url(home_url('/portfolio')); ?>">PORTFOLIO</a></li>
-        <li><a href="<?php echo esc_url(home_url('/#ism')); ?>">ISM</a></li>
+        <li><a href="#ism">ISM</a></li>
         <li><a href="<?php echo esc_url(home_url('/flow')); ?>">FLOW</a></li>
         <li><a href="<?php echo esc_url(home_url('/profile')); ?>">PROFILE</a></li>
         <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>"> INQUIRY</a></li>

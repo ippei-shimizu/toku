@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* アドレスバー・ツールバーを除いた100vhの高さを取得 */
   function setHeight() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -17,13 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
       stopOnLastSlide: true,
     },
-    initialSlide: 0, // 1枚目のスライドからスタート
+    initialSlide: 0,
+    watchOverflow: true,
     on: {
       init: function () {
         updateProgressBar(this.activeIndex);
       },
       slideChangeTransitionStart: function () {
-        resetProgressBars(); // 全てのプログレスバーをリセット
+        resetProgressBars();
         updateProgressBar(this.activeIndex);
       },
       slideChange: function () {
@@ -61,4 +61,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const targetOffZindex = document.querySelector("#offZindex");
+  const targetIsm = document.querySelector("#ism");
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.target.id === "offZindex") {
+        verticalSlider.params.mousewheel.enabled = false;
+        document.querySelector(".top").classList.add("fixed");
+      } else if (!entry.isIntersecting && entry.target.id === "ism") {
+        document.querySelector(".top").classList.remove("fixed");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  observer.observe(targetOffZindex);
+  observer.observe(targetIsm);
 });

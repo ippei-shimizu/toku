@@ -11,6 +11,7 @@ html {
 
 body {
   color: #000;
+  background-color: #040000;
 }
 
 @font-face {
@@ -97,6 +98,13 @@ body {
   transition: background-color 0.6s cubic-bezier(0.65, 0.07, 0.06, 1.01);
 }
 
+.top {
+  width: 100%;
+}
+.top.fixed {
+  position: fixed;
+  top: 0;
+}
 .top .swiper-wrapper {
   transition-timing-function: cubic-bezier(0.65, 0.07, 0.06, 1.01);
 }
@@ -159,5 +167,103 @@ body {
 .top .slide-number span {
   display: block;
   font-family: "helvetica-bold";
+}
+
+#offZindex {
+  position: absolute;
+  bottom: 0;
+}
+
+.ism {
+  position: relative;
+  padding-top: 100vh;
+  width: 100%;
+}
+.ism__inner {
+  position: relative;
+  padding-top: 432px;
+  margin-top: 1px;
+}
+.ism__inner::after {
+  content: "";
+  background: linear-gradient(0deg, rgb(4, 0, 0) 0%, rgba(4, 0, 0, 0) 100%);
+  width: 100%;
+  height: 432px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.ism .ism__bg {
+  background-color: #040000;
+  padding-bottom: 440px;
+}
+.ism .ism__box {
+  color: #fff;
+  padding-top: 442px;
+  -webkit-text-orientation: mixed;
+  text-orientation: mixed;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.ism .ism__box h2 {
+  font-size: 28px;
+  letter-spacing: 0.44em;
+  white-space: nowrap;
+}
+.ism .ism__box p {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.scrolldown1 {
+  position: absolute;
+  left: 50%;
+  top: 432px;
+  height: 138px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.scrolldown1 span {
+  position: absolute;
+  left: -15px;
+  top: -24px;
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.scrolldown1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: #fff;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 70px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 138px;
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

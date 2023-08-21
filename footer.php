@@ -21,6 +21,10 @@
         </div>
       </div>
 
+      <div class="sp-sns">
+      <a class="footer__instagram" href="https://www.instagram.com/official.toku/" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+
       <div class="footer__service">
         <p class="footer__title">SERVICE</p>
         <ul class="footer__service__list">

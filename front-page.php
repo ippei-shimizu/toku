@@ -75,8 +75,8 @@
     <div class="ism__bg">
       <div class="scrolldown1"><span>Scroll</span></div>
       <div class="ism__box">
-        <h2>理想は等身大だったりする。</h2>
-        <p>IT IS AS LARGE AS LIFE WITH THE IDEAL</p>
+        <h2 class="scrollOpen">理想は等身大だったりする。</h2>
+        <p class="scrollOpen">IT IS AS LARGE AS LIFE WITH THE IDEAL</p>
       </div>
     </div>
 
@@ -111,6 +111,39 @@
             </a>
           </li>
         </ul>
+        <div class="swiper-btn-nav btm__nav__box__sp">
+          <div class="swiper-wrapper">        
+              <div class="swiper-slide">
+                <a href="<?php echo esc_url(home_url('/portfolio')); ?>">
+                  <p>PORTFOLIO</p>
+                  <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-01.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-01.png" width="1298px" height="865px" alt="portfolio">
+                  </picture>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="<?php echo esc_url(home_url('/flow')); ?>">
+                  <p>FLOW</p>
+                  <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-02.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-02.png" width="1298px" height="865px" alt="FLOW">
+                  </picture>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="<?php echo esc_url(home_url('/inquiry')); ?>">
+                  <p>INQUIRY</p>
+                  <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-03.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-03.png" width="1298px" height="865px" alt="INQUIRY">
+                  </picture>
+                </a>
+              </div>
+          </div>
+          <div class="swiper-button-prev swiper-button"></div>
+          <div class="swiper-button-next swiper-button"></div>
+        </div>
         <p class="btm__nav__text__01">PUBLIC & PRIVATE  SENSE OF THE SEASON  BLANK SPACE & FLEXIBLE</p>
         <p class="btm__nav__text__02">Architect and creators.</p>
       </div>

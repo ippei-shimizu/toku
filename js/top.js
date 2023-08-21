@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const loadingElement = document.querySelector(".loading");
+  const bodyElement = document.body;
+
+  if (loadingElement) {
+    loadingElement.classList.add("loadingOpen");
+
+    setTimeout(function () {
+      loadingElement.style.display = "none";
+    }, 3600);
+  }
+
+  setTimeout(function () {
+    bodyElement.style.overflow = "initial";
+  }, 3600);
+
   function setHeight() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -21,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     on: {
       init: function () {
         updateProgressBar(this.activeIndex);
+        setTimeout(() => {
+          this.params.autoplay.delay = 5000;
+          this.autoplay.start();
+        }, 1000);
       },
       slideChangeTransitionStart: function () {
         resetProgressBars();
@@ -64,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const targetOffZindex = document.querySelector("#offZindex");
   const targetIsm = document.querySelectorAll(".observer");
+  const animatedElements = document.querySelectorAll(".scrollOpen");
   const observerOptions = {
     root: null,
     rootMargin: "0px",
@@ -75,8 +95,19 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting && entry.target.id === "offZindex") {
         verticalSlider.params.mousewheel.enabled = false;
         document.querySelector(".top").classList.add("fixed");
+        document.querySelector(".header").classList.add("header-small");
       } else if (!entry.isIntersecting && entry.target.id === "ism") {
         document.querySelector(".top").classList.remove("fixed");
+        document.querySelector(".header").classList.remove("header-small");
+      }
+
+      // animatedElements のみに visible クラスを付与する
+      if (
+        entry.isIntersecting &&
+        entry.target.classList.contains("scrollOpen")
+      ) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
   };
@@ -84,21 +115,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   observer.observe(targetOffZindex);
 
+  animatedElements.forEach((element) => {
+    observer.observe(element);
+  });
+
   // targetIsmの各要素をobserve
   targetIsm.forEach((el) => {
     observer.observe(el);
   });
 
-  // top-topix
-  const swiper = new Swiper(".swiper", {
+  // top-btn-nav
+  const swiperBtnNav = new Swiper(".swiper-btn-nav", {
     slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: "",
+      prevEl: ".swiper-button-prev",
     },
+  });
+
+  // top-topix
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 1,
     scrollbar: {
       el: ".swiper-scrollbar",
       draggable: true,
     },
   });
+
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector(".header__nav");
+
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("open");
+    if (navMenu.classList.contains("open")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
 });

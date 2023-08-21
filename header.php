@@ -12,10 +12,18 @@
 />
   <?php wp_head(); ?>
 </head>
+<body style="overflow: hidden;">
+<div class="loading">
+  <img class="loading__logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-w.svg" alt="toku" width="206px" height="116px">
+  <p class="loading__text">Architectual creation.</p>
+</div>
 <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="<?php echo esc_url(home_url('/')); ?>"></a>
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+      <span class="sp-logo-text">Architectual<br>
+creation.</span>
+      </a>
     </div>
     <nav class="header__nav">
       <ul>
@@ -25,7 +33,14 @@
         <li><a href="<?php echo esc_url(home_url('#profile')); ?>">PROFILE</a></li>
         <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>"> INQUIRY</a></li>
         <li class="nav__instagram"><a href="https://www.instagram.com/official.toku/" target="_blank" rel="noopener noreferrer"></a></li>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="sp-nav-logo">
+          <p>Architectual creation.</p>
+        </a>
       </ul>
     </nav>
+    <button id="hamburger" class="hamburger">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
   </div>
 </header>

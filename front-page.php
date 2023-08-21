@@ -79,8 +79,94 @@
         <p>IT IS AS LARGE AS LIFE WITH THE IDEAL</p>
       </div>
     </div>
+
+    <div id="btnNav" class="btm__nav__container">
+      <div class="btm__nav__inner">
+        <ul class="btm__nav__box">
+          <li>
+            <a href="<?php echo esc_url(home_url('/portfolio')); ?>">
+              <p>PORTFOLIO</p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-01.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-01.png" width="1298px" height="865px" alt="portfolio">
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(home_url('/flow')); ?>">
+              <p>FLOW</p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-02.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-02.png" width="1298px" height="865px" alt="FLOW">
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo esc_url(home_url('/inquiry')); ?>">
+              <p>INQUIRY</p>
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-03.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btm-nav-03.png" width="1298px" height="865px" alt="INQUIRY">
+              </picture>
+            </a>
+          </li>
+        </ul>
+        <p class="btm__nav__text__01">PUBLIC & PRIVATE  SENSE OF THE SEASON  BLANK SPACE & FLEXIBLE</p>
+        <p class="btm__nav__text__02">Architect and creators.</p>
+      </div>
+    </div>
+
+<!-- topix -->
+<div class="top__topix">
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <?php
+    $args = array(
+        'post_type' => 'topix',
+        'posts_per_page' => 3,
+    );
+
+    $the_query = new WP_Query($args);
+
+    if ($the_query->have_posts()) {
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+            echo '<div class="swiper-slide">';
+            echo '<div class="top-topix-post">';
+
+            echo '<div class="top-topix-post-title">';
+            echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a>';
+            echo '</div>';
+
+            if (has_post_thumbnail()) {
+                echo '<div class="top-topix-post-thumbnail">';
+                echo '<a href="' . get_the_permalink() . '">';
+                the_post_thumbnail();
+                echo '</a></div>';
+            }
+
+            echo '</div>';
+            echo '</div>';
+        }
+    }
+    wp_reset_postdata();
+    ?>
+  </div>
+  <div class="scrollbar-grid">
+    <div></div>
+    <div class="swiper-scrollbar"></div>
   </div>
 </div>
+
+    <p class="top-topix-btn">
+    <a href="<?php echo esc_url( home_url( '/topix' ) ); ?>">VIEW MORE</a>
+    </p>
+</div>
+
+
+  </div>
+</div>
+
 
 </main>
 

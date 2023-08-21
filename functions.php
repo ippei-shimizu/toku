@@ -19,3 +19,16 @@ function my_admin_theme_style() {
 }
 
 add_action('admin_enqueue_scripts', 'my_admin_theme_style');
+
+//アイキャッチ画像を有効化//
+add_theme_support('post-thumbnails');
+
+//URLスラッグの自動生成
+function auto_post_slug($slug, $post_ID, $post_status, $post_type)
+{
+  if (preg_match('/(%[0-9a-f]{2})+/', $slug)) {
+    $slug = utf8_uri_encode($post_type) . '-' . $post_ID;
+  }
+  return $slug;
+}
+add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);

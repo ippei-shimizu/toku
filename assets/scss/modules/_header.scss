@@ -21,6 +21,21 @@ body {
   src: url("../fonts/helvetica-bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "HelveticaLt";
+  src: url("../fonts/HelveticaLt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "A-OTF-GothicMB101Pro-DeBold";
+  src: url("../fonts/A-OTF-GothicMB101Pro-DeBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "A-OTF-GothicMB101Pro-Light";
+  src: url("../fonts/A-OTF-GothicMB101Pro-Light.otf") format("opentype");
+}
+
 .header {
   width: 100%;
   position: fixed;

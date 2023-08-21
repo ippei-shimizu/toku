@@ -84,4 +84,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   observer.observe(targetOffZindex);
   observer.observe(targetIsm);
+
+  // top-topix
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+  });
 });

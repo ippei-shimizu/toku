@@ -22,7 +22,7 @@
         <li><a href="<?php echo esc_url(home_url('/portfolio')); ?>">PORTFOLIO</a></li>
         <li><a href="#ism">ISM</a></li>
         <li><a href="<?php echo esc_url(home_url('/flow')); ?>">FLOW</a></li>
-        <li><a href="<?php echo esc_url(home_url('/profile')); ?>">PROFILE</a></li>
+        <li><a href="<?php echo esc_url(home_url('#profile')); ?>">PROFILE</a></li>
         <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>"> INQUIRY</a></li>
         <li><a href="<?php echo esc_url(home_url('/')); ?>"></a></li>
         <li class="nav__instagram"><a href="https://www.instagram.com/official.toku/" target="_blank" rel="noopener noreferrer"></a></li>

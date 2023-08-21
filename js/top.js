@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const targetOffZindex = document.querySelector("#offZindex");
-  const targetIsm = document.querySelector("#ism");
+  const targetIsm = document.querySelectorAll(".observer");
   const observerOptions = {
     root: null,
     rootMargin: "0px",
@@ -83,18 +83,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   observer.observe(targetOffZindex);
-  observer.observe(targetIsm);
+
+  // targetIsmの各要素をobserve
+  targetIsm.forEach((el) => {
+    observer.observe(el);
+  });
 
   // top-topix
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '',
+      nextEl: ".swiper-button-next",
+      prevEl: "",
     },
     scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
+      el: ".swiper-scrollbar",
+      draggable: true,
     },
   });
 });

@@ -71,7 +71,7 @@
 </div>
 
 <div class="ism">
-  <div id="ism" class="ism__inner">
+  <div id="ism" class="ism__inner observer">
     <div class="ism__bg">
       <div class="scrolldown1"><span>Scroll</span></div>
       <div class="ism__box">
@@ -163,11 +163,10 @@
     </p>
 </div>
 
-
+<?php get_footer(); ?>
   </div>
 </div>
 
 
 </main>
 
-<?php get_footer(); ?>

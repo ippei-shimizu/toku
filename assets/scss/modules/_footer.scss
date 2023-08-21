@@ -5,8 +5,19 @@
 }
 
 .footer__inner {
-  padding: 546px 82px 54px;
+  padding: 574px 82px 54px;
   position: relative;
+  &::before {
+    content: "";
+    background: linear-gradient(180deg, rgb(4, 0, 0) 0%, rgb(2 2 2 / 25%) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 1;
+  }
 }
 
 .footer__bg {
@@ -27,4 +38,115 @@
   position: relative;
   z-index: 1;
   color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr 50px;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.footer__company {
+  margin-right: 142px;
+}
+
+.footer__title {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-family: $family-A-OTF-GothicMB101Pro-Light;
+  margin-bottom: 82px;
+}
+
+.company__info {
+  .info__text {
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
+    margin-bottom: 18px;
+    &:nth-child(1) {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+    }
+  }
+}
+
+.google__map {
+  a {
+    font-size: 13px;
+    font-family: $family-A-OTF-GothicMB101Pro-Reg;
+    letter-spacing: 0.1em;
+    display: block;
+    width: 171px;
+    line-height: 34px;
+    border: 1px solid #fff;
+    text-align: center;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 13px;
+      height: 16px;
+      background-color: #fff;
+      -webkit-mask-image: url(../assets/images/icon-pin.svg);
+      mask-image: url(../assets/images/icon-pin.svg);
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 18px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.company__tel__email {
+  margin-top: 80px;
+  p {
+    margin-bottom: 22px;
+    a {
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      font-family: $family-A-OTF-GothicMB101Pro-Light;
+    }
+  }
+}
+
+.footer__service__list {
+  li {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    &:nth-child(even) {
+      margin: 24px 0;
+    }
+  }
+}
+
+.footer__instagram {
+  display: block;
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    -webkit-mask-image: url(../assets/images/icon-instagram.svg);
+    mask-image: url(../assets/images/icon-instagram.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    margin: 0 0 0 auto;
+  }
+}
+
+.copy {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-align: right;
 }

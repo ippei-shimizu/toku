@@ -376,3 +376,28 @@ body {
   transition: transform 0.6s cubic-bezier(0.65, 0.07, 0.06, 1.01),
     background-color 0.6s cubic-bezier(0.65, 0.07, 0.06, 1.01);
 }
+
+.page-header {
+  .page-header-nav {
+    display: none;
+    @include media(bp760) {
+      display: block;
+    }
+  }
+  .sp-logo-text-page {
+    @include media(bp760) {
+      display: none;
+    }
+  }
+  .header__logo {
+    a {
+      z-index: 999;
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+  .hamburger__line {
+    background-color: #fff;
+  }
+}

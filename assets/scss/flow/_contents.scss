@@ -1,0 +1,143 @@
+@use "../setting/index" as *;
+
+.flow__contents__inner {
+  padding: 384px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.flow__contents__title {
+  font-size: 24px;
+  font-family: $family-A-OTF-GothicMB101Pro-Light;
+  color: #fff;
+  letter-spacing: 0.28em;
+}
+.flow__contents__text {
+  font-size: 14px;
+  font-family: $family-A-OTF-GothicMB101Pro-Light;
+  color: #fff;
+  letter-spacing: 0.26em;
+}
+
+.flow__list {
+  position: relative;
+  padding-bottom: 880px;
+}
+.flow__list__inner {
+  padding: 0 182px;
+}
+.flow__list__item {
+  margin-bottom: 162px;
+  color: #fff;
+}
+.flow__list__box {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 62px;
+}
+.flow__num {
+  font-size: 62px;
+  letter-spacing: 0.1em;
+  font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+  opacity: 0;
+  visibility: hidden;
+}
+.flow__list__wrap {
+  padding-top: 32px;
+}
+.flow__border {
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 82px;
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background-color: #fff;
+  }
+}
+.flow__list__title {
+  font-size: 26px;
+  letter-spacing: 0.28em;
+  font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+  opacity: 0;
+  visibility: hidden;
+}
+.flow__list__sub {
+  font-size: 14px;
+  letter-spacing: 0.26em;
+  font-family: $family-A-OTF-GothicMB101Pro-Light;
+  margin: 14px 0 56px;
+  opacity: 0;
+  visibility: hidden;
+}
+.flow__list__text {
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  line-height: 2;
+  font-family: $family-A-OTF-GothicMB101Pro-Light;
+  opacity: 0;
+  visibility: hidden;
+}
+.flow__bg {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  height: 1286px;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.flow__bg__02 {
+  top: 54%;
+}
+
+.page__footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .header__logo {
+    a {
+      &::before {
+        background-color: #fff;
+        width: 162px;
+        height: 92px;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 48px;
+    li {
+      a {
+        color: #fff;
+        font-size: 18px;
+        font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+        letter-spacing: 0.1em;
+      }
+      &.activeLink {
+        a {
+          color: #4d4d4d;
+        }
+      }
+    }
+  }
+}

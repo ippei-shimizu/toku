@@ -1,4 +1,24 @@
 <footer class="footer">
+<?php
+if ( !is_front_page() ) :
+?>
+  <div class="page__footer__nav">
+    <div class="header__logo">
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+      </a>
+    </div>
+    <ul>
+      <li <?php if (is_page('portfolio')) echo 'class="activeLink"'; ?>><a <?php if (is_page('portfolio')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/portfolio')).'"'; ?>>PORTFOLIO</a></li>
+      <li <?php if (is_page('topix')) echo 'class="activeLink"'; ?>><a <?php if (is_page('topix')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/topix')).'"'; ?>>TOPIX</a></li>
+      <li <?php if (is_page('flow')) echo 'class="activeLink"'; ?>><a <?php if (is_page('flow')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/flow')).'"'; ?>>FLOW</a></li>
+      <li <?php if (is_front_page()) echo 'class="activeLink"'; ?>><a <?php if (is_front_page()) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('#profile')).'"'; ?>>PROFILE</a></li>
+      <li <?php if (is_page('inquiry')) echo 'class="activeLink"'; ?>><a <?php if (is_page('inquiry')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/inquiry')).'"'; ?>>INQUIRY</a></li>
+    </ul>
+  </div>
+<?php
+endif; 
+?>
+
   <div class="footer__inner">
     <div class="footer__bg">
       <picture>
@@ -48,6 +68,8 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

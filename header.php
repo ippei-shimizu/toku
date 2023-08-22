@@ -12,9 +12,11 @@
 />
   <?php wp_head(); ?>
 </head>
-<body style="overflow: hidden;">
+<body>
 <div class="loading">
   <img class="loading__logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-w.svg" alt="toku" width="206px" height="116px">
+    <span class="sp-loading-logo-text">Architectual<br>
+creation.</span>
   <p class="loading__text">Architectual creation.</p>
 </div>
 <header class="header">

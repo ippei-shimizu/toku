@@ -19,6 +19,14 @@
       transition: opacity 2.4s $easing-cubic-02,
         visibility 2.4s $easing-cubic-02;
     }
+    .sp-loading-logo-text {
+      @include media(bp760) {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 2.4s $easing-cubic-02,
+          visibility 2.4s $easing-cubic-02;
+      }
+    }
     .loading__text {
       opacity: 1;
       visibility: visible;
@@ -33,6 +41,26 @@
   margin: 46px 60px 0;
   opacity: 0;
   visibility: hidden;
+  @include media(bp760) {
+    width: 82px;
+    height: 46px;
+    margin: 8px 18px 0;
+  }
+}
+
+.sp-loading-logo-text {
+  display: none;
+  @include media(bp760) {
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-family: "helvetica-bold";
+    padding: 10px 0px 0 24px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .loading__text {
@@ -46,6 +74,10 @@
   transform: translateY(-50%);
   opacity: 0;
   visibility: hidden;
+  @include media(bp760) {
+    font-size: 18px;
+    right: 24px;
+  }
 }
 
 * {

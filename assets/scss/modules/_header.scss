@@ -94,6 +94,7 @@ html {
 body {
   color: #000;
   background-color: $color-bg;
+  font-family: "A-OTF-GothicMB101Pro-Light", "HelveticaLt";
 }
 
 @font-face {
@@ -378,6 +379,10 @@ body {
 }
 
 .page-header {
+  position: relative;
+  .header__inner {
+    padding: 0;
+  }
   .page-header-nav {
     display: none;
     @include media(bp760) {
@@ -390,6 +395,14 @@ body {
     }
   }
   .header__logo {
+    position: fixed;
+    left: 60px;
+    top: 46px;
+    z-index: 999;
+    @include media(bp760) {
+      top: 24px;
+      left: 24px;
+    }
     a {
       z-index: 999;
       &::before {

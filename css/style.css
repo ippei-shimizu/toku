@@ -94,6 +94,7 @@ html {
 body {
   color: #000;
   background-color: #040000;
+  font-family: "A-OTF-GothicMB101Pro-Light", "HelveticaLt";
 }
 
 @font-face {
@@ -361,6 +362,12 @@ body {
   transition: transform 0.6s cubic-bezier(0.65, 0.07, 0.06, 1.01), background-color 0.6s cubic-bezier(0.65, 0.07, 0.06, 1.01);
 }
 
+.page-header {
+  position: relative;
+}
+.page-header .header__inner {
+  padding: 0;
+}
 .page-header .page-header-nav {
   display: none;
 }
@@ -372,6 +379,18 @@ body {
 @media screen and (max-width:760px) {
   .page-header .sp-logo-text-page {
     display: none;
+  }
+}
+.page-header .header__logo {
+  position: fixed;
+  left: 60px;
+  top: 46px;
+  z-index: 999;
+}
+@media screen and (max-width:760px) {
+  .page-header .header__logo {
+    top: 24px;
+    left: 24px;
   }
 }
 .page-header .header__logo a {
@@ -937,6 +956,7 @@ body {
   height: 100%;
   object-fit: cover;
   position: absolute;
+  border-radius: 14px;
   top: 0;
   left: 0;
   transition: transform 0.8s cubic-bezier(0.25, 0.07, 0.06, 0.7);
@@ -1693,6 +1713,16 @@ p.form__message {
   opacity: 0.5;
 }
 
+.wpcf7 form.sent .wpcf7-response-output {
+  color: #fff !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  color: #fff !important;
+}
+
 .portfolio__inner {
   padding: 282px 24px 262px;
 }
@@ -2421,10 +2451,12 @@ h6 {
   line-height: 1.4em;
   font-weight: bold;
   max-width: 460px;
+  font-family: "A-OTF-GothicMB101Pro-DeBold";
 }
 .single__topix__container .single-post-title .post-categories {
   position: absolute;
   top: 24px;
+  font-family: "A-OTF-GothicMB101Pro-Light";
 }
 .single__topix__container .single-post-title .post-categories a {
   background-color: #fff;
@@ -2433,12 +2465,14 @@ h6 {
   letter-spacing: 0.1em;
   padding: 1px 12px;
   transition: opacity 0.2s ease;
+  font-family: "A-OTF-GothicMB101Pro-Light";
 }
 .single__topix__container .single-post-title .post-date {
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.1em;
   margin-bottom: 8px;
+  font-family: "A-OTF-GothicMB101Pro-Light";
 }
 .single__topix__container .single-post-excerpt {
   max-width: 640px;
@@ -2468,6 +2502,7 @@ h6 {
   display: block;
   transition: opacity 0.2s ease;
   border: 1px solid #fff;
+  font-family: "A-OTF-GothicMB101Pro-Light";
 }
 .single__topix__container .back-button {
   width: 437px;
@@ -2483,9 +2518,13 @@ h6 {
   display: block;
   transition: opacity 0.2s ease;
   border: 1px solid #fff;
+  font-family: "A-OTF-GothicMB101Pro-Light";
 }
 
 @media screen and (max-width:760px) {
+  .single__topix__container {
+    font-family: "A-OTF-GothicMB101Pro-Light";
+  }
   .single__topix__container .single-content-inner {
     width: 100%;
     padding: 72px 0 282px;

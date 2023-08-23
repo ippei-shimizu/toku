@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico"> -->
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
   <title>toku</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
   <link
@@ -32,7 +32,7 @@ creation.</span>
         <li><a href="<?php echo esc_url(home_url('/portfolio')); ?>">PORTFOLIO</a></li>
         <li><a href="<?php echo esc_url(home_url('/topix')); ?>">TOPIX</a></li>
         <li><a href="<?php echo esc_url(home_url('/flow')); ?>">FLOW</a></li>
-        <li><a href="<?php echo esc_url(home_url('#profile')); ?>">PROFILE</a></li>
+        <li><a id="profileLink" href="<?php echo esc_url(home_url('#profile')); ?>">PROFILE</a></li>
         <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>"> INQUIRY</a></li>
         <li class="nav__instagram"><a href="https://www.instagram.com/official.toku/" target="_blank" rel="noopener noreferrer"></a></li>
         <a href="<?php echo esc_url(home_url('/')); ?>" class="sp-nav-logo">

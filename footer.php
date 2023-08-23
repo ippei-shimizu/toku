@@ -33,7 +33,7 @@ endif;
         <div class="company__info">
           <p class="info__text">株式会社 TOKU</p>
           <p class="info__text">山梨県甲州市塩山三日市場1859-1</p>
-          <p class="google__map"><a href="" target="_blank" rel="noopener noreferrer">Google Map</a></p>
+          <p class="google__map"><a href="https://www.google.co.jp/maps/place/%EF%BC%B4%EF%BC%AF%EF%BC%AB%EF%BC%B5/@35.722052,138.7156331,17z/data=!3m1!4b1!4m6!3m5!1s0x601bfe279a1e4d25:0xeefaf6a399b5d2e0!8m2!3d35.722052!4d138.718208!16s%2Fg%2F11cmb7zq38?hl=ja&entry=ttu" target="_blank" rel="noopener noreferrer">Google Map</a></p>
         </div>
         <div class="company__tel__email">
           <p><a href="tel:090-4458-0505">TEL  ： 090-4458-0505</a></p>

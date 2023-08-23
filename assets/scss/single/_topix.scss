@@ -29,10 +29,12 @@
     line-height: 1.4em;
     font-weight: bold;
     max-width: 460px;
+    font-family: $family-A-OTF-GothicMB101Pro-DeBold;
   }
   .single-post-title .post-categories {
     position: absolute;
     top: 24px;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
   }
   .single-post-title .post-categories a {
     background-color: #fff;
@@ -41,12 +43,14 @@
     letter-spacing: 0.1em;
     padding: 1px 12px;
     transition: opacity 0.2s ease;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
   }
   .single-post-title .post-date {
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 0.1em;
     margin-bottom: 8px;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
   }
   .single-post-excerpt {
     max-width: 640px;
@@ -76,6 +80,7 @@
     display: block;
     transition: opacity 0.2s ease;
     border: 1px solid #fff;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
   }
   .back-button {
     width: 437px;
@@ -91,11 +96,13 @@
     display: block;
     transition: opacity 0.2s ease;
     border: 1px solid #fff;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
   }
 }
 
 @include media(bp760) {
   .single__topix__container {
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
     .single-content-inner {
       width: 100%;
       padding: 72px 0 282px;

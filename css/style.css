@@ -2390,4 +2390,139 @@ h6 {
 .single-post-content a:hover {
   opacity: 0.6;
 }
+
+.single__topix__container {
+  color: #fff;
+}
+.single__topix__container .single-content-inner {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 86px 0 312px;
+}
+.single__topix__container .single-post-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+  margin-bottom: 92px;
+  position: relative;
+}
+.single__topix__container .single-post-thumbnail {
+  width: 36%;
+}
+.single__topix__container .single-post-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.single__topix__container .single-post-title {
+  font-size: 25px;
+  letter-spacing: 0.1em;
+  line-height: 1.4em;
+  font-weight: bold;
+  max-width: 460px;
+}
+.single__topix__container .single-post-title .post-categories {
+  position: absolute;
+  top: 24px;
+}
+.single__topix__container .single-post-title .post-categories a {
+  background-color: #fff;
+  font-size: 14px;
+  color: #000;
+  letter-spacing: 0.1em;
+  padding: 1px 12px;
+  transition: opacity 0.2s ease;
+}
+.single__topix__container .single-post-title .post-date {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.single__topix__container .single-post-excerpt {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.single__topix__container .single-post-excerpt p {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+.single__topix__container .single-post-content-topix {
+  max-width: 640px;
+  margin: 140px auto 220px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.single__topix__container #view-more {
+  width: 437px;
+  height: 102px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 0.2em;
+  margin: 140px auto 0;
+  display: block;
+  transition: opacity 0.2s ease;
+  border: 1px solid #fff;
+}
+.single__topix__container .back-button {
+  width: 437px;
+  margin: 106px auto 0;
+}
+.single__topix__container .back-button a {
+  background-color: #000;
+  line-height: 102px;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 0.2em;
+  display: block;
+  transition: opacity 0.2s ease;
+  border: 1px solid #fff;
+}
+
+@media screen and (max-width:760px) {
+  .single__topix__container .single-content-inner {
+    width: 100%;
+    padding: 72px 0 282px;
+  }
+  .single__topix__container .single-post-header {
+    display: block;
+  }
+  .single__topix__container .single-post-thumbnail {
+    width: 100%;
+  }
+  .single__topix__container .single-post-title {
+    width: 90%;
+    margin: 46px auto 82px;
+    font-size: 20px;
+  }
+  .single__topix__container .single-post-title .post-categories {
+    position: initial;
+    margin-bottom: 24px;
+  }
+  .single__topix__container .single-post-excerpt {
+    width: 90%;
+  }
+  .single__topix__container .single-post-content {
+    width: 90%;
+  }
+  .single__topix__container #view-more {
+    width: 86%;
+    font-size: 16px;
+    height: 66px;
+  }
+  .single__topix__container .back-button {
+    width: 86%;
+  }
+  .single__topix__container .back-button a {
+    font-size: 16px;
+    height: 66px;
+    line-height: 66px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

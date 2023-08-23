@@ -22,6 +22,11 @@ function my_theme_styles_and_scripts() {
       wp_enqueue_script('portfolio-script', get_template_directory_uri() . '/js/portfolio.js', array(), $version, true);
     }
 
+    if (is_singular('topix')) {
+      $version = filemtime(get_template_directory() . '/js/topix.js');
+      wp_enqueue_script('topix-script', get_template_directory_uri() . '/js/topix.js', array(), $version, true);
+    }
+
     if (is_page('flow')) {
       $version = filemtime(get_template_directory() . '/js/flow.js');
       wp_enqueue_script('flow-script', get_template_directory_uri() . '/js/flow.js', array(), $version, true);

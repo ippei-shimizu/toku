@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // GSAPのタイムラインを初期化
   gsap.registerPlugin(ScrollTrigger);
 
   const items = document.querySelectorAll(".flow__list__item");
@@ -8,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: item,
         start: "top 75%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none", // リバースアクションを無効化
+        once: true, // アニメーションを一度だけ発火させる
       },
     });
 

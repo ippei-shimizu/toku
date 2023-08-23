@@ -52,6 +52,9 @@
     transform: translate3d(0, 5rem, 0);
     opacity: 0;
     will-change: opacity, transform;
+    @include media(bp760) {
+      font-size: 25px;
+    }
   }
 
   &.openPageTitle {

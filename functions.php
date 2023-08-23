@@ -15,7 +15,12 @@ function my_theme_styles_and_scripts() {
     if (is_page() || is_archive() || is_tax()) {
       $version = filemtime(get_template_directory() . '/js/page.js');
       wp_enqueue_script('page-script', get_template_directory_uri() . '/js/page.js', array(), $version, true);
-  }  
+    }  
+
+    if (is_singular('portfolio')) {
+      $version = filemtime(get_template_directory() . '/js/portfolio.js');
+      wp_enqueue_script('portfolio-script', get_template_directory_uri() . '/js/portfolio.js', array(), $version, true);
+    }
 
     if (is_page('flow')) {
       $version = filemtime(get_template_directory() . '/js/flow.js');

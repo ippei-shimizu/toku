@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        start: "top 75%",
+        start: "top 90%",
         toggleActions: "play none none none", // リバースアクションを無効化
         once: true, // アニメーションを一度だけ発火させる
       },

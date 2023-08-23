@@ -1,5 +1,223 @@
 @use "../setting/index" as *;
 
 .topix__fv {
+  height: 75vh;
+  @include media(bp760) {
+    height: 40vh;
+  }
+  .page-title {
+    margin-bottom: 15%;
+  }
+}
 
+.topix__archive__container {
+  .archive-category {
+    margin-bottom: 200px;
+    @include media(bp760) {
+      margin-bottom: 0;
+    }
+    ul {
+      display: flex;
+      gap: 52px;
+      justify-content: flex-end;
+      padding: 0 15% 0 0;
+      @include media(bp760) {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 0;
+      }
+      li {
+        font-size: 16px;
+        font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+        letter-spacing: 0.2em;
+        color: #666666;
+        @include media(bp760) {
+          font-size: 10px;
+        }
+        a {
+          &.active {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .archive-contents {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 78%;
+    padding-bottom: 420px;
+    color: #fff;
+  }
+  .archive-contents-inner {
+    padding: 124px 0 156px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3%;
+  }
+  .archive-post-topix {
+    margin-bottom: 14%;
+    @include media(bp760) {
+      margin-bottom: 40px;
+    }
+  }
+  .archive-post-topix .archive-post-thumbnail {
+    margin-bottom: 24px;
+    height: auto;
+    @include media(bp760) {
+      margin-bottom: 16px;
+    }
+  }
+  .archive-post-thumbnail a {
+    display: block;
+    position: relative;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+    }
+    &:hover {
+      &::before {
+        opacity: 0.4;
+      }
+    }
+  }
+  .archive-post-thumbnail a img {
+    width: 100%;
+    height: 22vw;
+    object-fit: cover;
+  }
+  .archive-post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .archive-post-topix .post-date {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
+    @include media(bp760) {
+      font-size: 10px;
+      margin-bottom: 5px!important;
+    }
+  }
+  .archive-post-topix .post-categories {
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    padding: 2px 8px;
+    display: block;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+    font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+    @include media(bp760) {
+      font-size: 10px;
+    }
+  }
+  .archive-post-topix .archive-post-title {
+    margin: 12px 0 0;
+    @include media(bp760) {
+      margin-top: 8px;
+    }
+  }
+  .archive-post-topix .archive-post-title a {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+    transition: opacity 0.2s ease;
+    line-height: 1.4em;
+    margin: 0;
+    @include media(bp760) {
+      font-size: 12px;
+    }
+  }
+  .archive-pagenation {
+    display: flex;
+    @include media(bp760) {
+      margin-top: 0;
+    }
+    .page-numbers {
+      margin: 0 12px;
+      font-family: $family-A-OTF-GothicMB101Pro-DeBold;
+      color: #b5b5b6;
+      @include media(bp760) {
+        margin: 0 5px;
+      }
+    }
+  }
+  .prev-page,
+  .next-page {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b5b5b6;
+    letter-spacing: 0.2em;
+    font-family: $family-A-OTF-GothicMB101Pro-Light;
+    @include media(bp760) {
+      font-size: 10px;
+    }
+    &::before {
+      display: none;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+  .pagenation-num {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .topix__archive__container .archive-contents {
+    width: 96%;
+  }
+  .topix__archive__container .archive-post-thumbnail a img {
+    height: 27vw;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .topix__archive__container .archive-post-meta {
+    display: block;
+  }
+  .topix__archive__container {
+    .archive-post-topix .post-date {
+      margin-bottom: 12px;
+    }
+    .archive-post-topix .post-categories {
+      display: inline-block;
+    }
+  }
+}
+
+@include media(bp760) {
+  .topix__archive__container {
+    .archive-contents {
+      width: 86%;
+      padding-bottom: 128px;
+    }
+    .archive-contents-inner {
+      padding-top: 72px;
+      padding-bottom: 132px;
+      grid-template-columns: 1fr 1fr;
+      gap: 1% 6%;
+    }
+    .archive-post-thumbnail a img {
+      height: 40.42vw;
+    aspect-ratio: 1;
+    }
+  }
 }

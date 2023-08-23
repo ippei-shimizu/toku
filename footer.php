@@ -8,8 +8,8 @@ if ( !is_front_page() ) :
       </a>
     </div>
     <ul>
-      <li <?php if (is_archive('portfolio')) echo 'class="activeLink"'; ?>><a <?php if (is_archive('portfolio')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/portfolio')).'"'; ?>>PORTFOLIO</a></li>
-      <li <?php if (is_page('topix')) echo 'class="activeLink"'; ?>><a <?php if (is_page('topix')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/topix')).'"'; ?>>TOPIX</a></li>
+      <li <?php if (is_post_type_archive('portfolio')) echo 'class="activeLink"'; ?>><a <?php if (is_post_type_archive('portfolio')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/portfolio')).'"'; ?>>PORTFOLIO</a></li>
+      <li <?php if (is_post_type_archive('topix')) echo 'class="activeLink"'; ?>><a <?php if (is_post_type_archive('topix')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/topix')).'"'; ?>>TOPIX</a></li>
       <li <?php if (is_page('flow')) echo 'class="activeLink"'; ?>><a <?php if (is_page('flow')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/flow')).'"'; ?>>FLOW</a></li>
       <li <?php if (is_front_page()) echo 'class="activeLink"'; ?>><a <?php if (is_front_page()) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('#profile')).'"'; ?>>PROFILE</a></li>
       <li <?php if (is_page('inquiry')) echo 'class="activeLink"'; ?>><a <?php if (is_page('inquiry')) echo 'href="javascript:void(0)"'; else echo 'href="'.esc_url(home_url('/inquiry')).'"'; ?>>INQUIRY</a></li>

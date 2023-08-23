@@ -8,7 +8,7 @@
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv.webp" media="(min-width:768px)" type="image/webp">
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv.png" media="(min-width:768px)">
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv-sp.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv-sp.png" width="1366px" height="942px" alt="INQUIRY">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv-sp.png" width="1366px" height="942px" alt="portfolio">
       </picture>
     </div>
     <h2 class="page-title">

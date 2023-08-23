@@ -49,3 +49,12 @@ function auto_post_slug($slug, $post_ID, $post_status, $post_type)
   return $slug;
 }
 add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);
+
+function custom_posts_per_page($query) {
+  if (!is_admin() && $query->is_main_query()) { // 管理画面でない & メインクエリのときに実行
+      if (is_post_type_archive('topix')) {
+          $query->set('posts_per_page', 12); // 投稿タイプが 'topix' のアーカイブページのとき表示件数を12に設定
+      }
+  }
+}
+add_action('pre_get_posts', 'custom_posts_per_page');

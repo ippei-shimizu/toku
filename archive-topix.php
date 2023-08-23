@@ -3,12 +3,7 @@
 <div class="topix__fv flow__fv">
   <div class="flow__fv__inner">
     <div class="flow__fv__bg">
-      <picture>
-        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv.webp" media="(min-width:768px)" type="image/webp">
-        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv.png" media="(min-width:768px)">
-        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv-sp.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/portfolio-fv-sp.png" width="1366px" height="942px" alt="INQUIRY">
-      </picture>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/topix-bg.png" width="1366px" height="942px" alt="topix">
     </div>
     <h2 class="page-title">
       <span>T</span>
@@ -38,7 +33,7 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 	$all_class = is_post_type_archive( 'topix' ) ? ' active' : '';
 	echo '<li><a href="' . get_post_type_archive_link( 'topix' ) . '" class="' . $all_class . '">ALL</a></li>';
 	foreach ( $terms as $term ) {
-		$term_class = is_tax( 'work_category', $term->term_id ) ? ' active' : '';
+		$term_class = is_tax( 'topix_category', $term->term_id ) ? ' active' : '';
 		echo '<li><a href="' . get_term_link( $term ) . '" class="' . $term_class . '">' . $term->name . '</a></li>';
 	}
 	echo '</ul>';

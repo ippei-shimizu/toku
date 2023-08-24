@@ -63,6 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           header.classList.remove("color-white");
         }
+
+        if (this.activeIndex === this.slides.length - 1) {  
+          setTimeout(function() {
+              const scrolldownElement = document.querySelector(".swiper-slide:last-child .scrolldown1");
+              scrolldownElement.style.opacity = 1;
+          }, 5000);  
+      }
       },
     },
   });

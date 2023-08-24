@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: item,
         start: "top 100%",
-        toggleActions: "play none none none", // リバースアクションを無効化
-        once: true, // アニメーションを一度だけ発火させる
+        toggleActions: "play none none none", 
+        once: true, 
       },
     });
 

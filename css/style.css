@@ -779,6 +779,10 @@ body {
   animation: slideImage 10s linear forwards;
 }
 
+#verticalSlider05 {
+  position: relative;
+}
+
 .ism {
   position: relative;
   padding-top: 100vh;
@@ -861,11 +865,12 @@ body {
 
 .scrolldown1 {
   position: absolute;
-  left: 50%;
-  top: 432px;
+  left: 80px;
+  bottom: 0;
   height: 138px;
-  transform: translateX(-50%);
   z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .scrolldown1 span {

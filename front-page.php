@@ -54,6 +54,7 @@
       <div class="slide-number"><span>4</span><span>-</span><span>5</span></div>
     </div>
     <div id="verticalSlider05" class="swiper-slide vertical-slider__slide">
+      <div class="scrolldown1"><span>Scroll</span></div>
       <picture>
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-05.webp" media="(min-width:768px)" type="image/webp">
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top-05.png" media="(min-width:768px)">
@@ -73,7 +74,6 @@
 <div class="ism">
   <div id="ism" class="ism__inner observer">
     <div class="ism__bg">
-      <div class="scrolldown1"><span>Scroll</span></div>
       <div class="ism__box">
         <h2 class="scrollOpen">理想は等身大だったりする。</h2>
         <p class="scrollOpen">IT IS AS LARGE AS LIFE WITH THE IDEAL</p>

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        start: "top 90%",
+        start: "top 100%",
         toggleActions: "play none none none", // リバースアクションを無効化
         once: true, // アニメーションを一度だけ発火させる
       },
@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const sub = item.querySelector(".flow__list__sub");
     const text = item.querySelector(".flow__list__text");
 
-    tl.to(num, { opacity: 1, visibility: "visible", duration: 0.5 })
-      .to(border, { width: "100%", duration: 0.5 })
+    tl.to(num, { opacity: 1, visibility: "visible", duration:1.2 })
+      .to(border, { width: "100%", duration: .8 })
       .to([title, sub], {
         opacity: 1,
         visibility: "visible",
-        duration: 0.5,
-        stagger: 0.25,
+        duration: 1.2,
+        stagger: 0.15,
       })
-      .to(text, { opacity: 1, visibility: "visible", duration: 0.5 });
+      .to(text, { opacity: 1, visibility: "visible", duration:1.2 });
   });
 });

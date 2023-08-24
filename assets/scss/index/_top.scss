@@ -37,10 +37,12 @@
   }
 
   .vertical-slider-img {
-    width: 100%;
+    width: 106%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    position: relative;
+    left: -6%;
   }
 
   .progress-container {
@@ -96,4 +98,17 @@
 #offZindex {
   position: absolute;
   bottom: 0;
+}
+
+@keyframes slideImage {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(6vw); 
+  }
+}
+
+.vertical-slider-img.animated {
+  animation: slideImage 10s linear forwards;
 }

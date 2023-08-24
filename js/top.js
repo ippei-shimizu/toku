@@ -2,6 +2,8 @@ document.body.style.overflow = "hidden";
 let firstLoadDelayApplied = false;
 
 document.addEventListener("DOMContentLoaded", function () {
+  const firstSlideImage = document.querySelector(".swiper-slide:first-child .vertical-slider-img");
+  firstSlideImage.classList.add('animated');
 
   const loadingElement = document.querySelector(".loading");
   const bodyElement = document.body;
@@ -40,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
       slideChangeTransitionStart: function () {
         resetProgressBars();
         updateProgressBar(this.activeIndex);
+        setTimeout(() => { 
+          const allSlideImages = document.querySelectorAll('.vertical-slider-img');
+          const currentSlideImg = this.slides[this.activeIndex].querySelector(".vertical-slider-img");
+          allSlideImages.forEach(img => {
+              img.classList.remove('animated');
+              currentSlideImg.classList.add('animated');
+          });
+      }, 1000); 
       },
       slideChange: function () {
         const currentSlide = this.slides[this.activeIndex];
@@ -64,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       stopOnLastSlide: true,
     };
     verticalSlider.autoplay.start();
-  }, 3600);
+  }, 2600);
 
   // 全てのプログレスバーのwidthを0%にリセットする関数
   function resetProgressBars() {
@@ -81,10 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const progressBar = slide.querySelector(".progress-bar");
       if (idx === index) {
         if (idx === 0 && !firstLoadDelayApplied) {
-          progressBar.style.transition = "width 6s linear 2.5s";
+          progressBar.style.transition = "width 5s linear 2.5s";
           firstLoadDelayApplied = true; 
         } else {
-          progressBar.style.transition = "width 6s linear 0s";
+          progressBar.style.transition = "width 5s linear 0s";
         }
         progressBar.style.width = "100%";
       }

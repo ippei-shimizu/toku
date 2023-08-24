@@ -11,27 +11,27 @@
   &.loadingOpen {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 2s $easing-cubic-02 1.4s,
-      visibility 2s $easing-cubic-02 1.4s;
+    transition: opacity 1.4s $easing-cubic-02 1.6s,
+      visibility 1.4s $easing-cubic-02 1.6s;
     .loading__logo {
       opacity: 1;
       visibility: visible;
-      transition: opacity 2s $easing-cubic-02,
-        visibility 2s $easing-cubic-02;
+      transition: opacity 1.6s $easing-cubic-02,
+        visibility 1.6s $easing-cubic-02;
     }
     .sp-loading-logo-text {
       @include media(bp760) {
         opacity: 1;
         visibility: visible;
-        transition: opacity 2s $easing-cubic-02,
-          visibility 2s $easing-cubic-02;
+        transition: opacity 1.6s $easing-cubic-02,
+          visibility 1.6s $easing-cubic-02;
       }
     }
     .loading__text {
       opacity: 1;
       visibility: visible;
-      transition: opacity 2s $easing-cubic-02 1s,
-        visibility 2s $easing-cubic-02 1s;
+      transition: opacity 1.6s $easing-cubic-02 1s,
+        visibility 1.6s $easing-cubic-02 1s;
     }
   }
 }

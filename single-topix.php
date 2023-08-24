@@ -17,12 +17,12 @@
       while ( have_posts() ) : the_post();
         // Display the post thumbnail and title side by side
         echo '<div class="single-post-header">';
-          echo '<div class="single-post-thumbnail">';
+          echo '<div class="single-post-thumbnail fadeUpElement">';
             if ( has_post_thumbnail() ) :
               the_post_thumbnail();
             endif;
           echo '</div>';
-          echo '<div class="single-post-title">';
+          echo '<div class="single-post-title fadeUpElement">';
             // Display categories
             $categories = get_the_term_list( $post->ID, 'topix_category', '', ', ' );
             if ( $categories ) :
@@ -36,7 +36,7 @@
         echo '</div>';
 
         // Display the post excerpt
-        echo '<div class="single-post-excerpt">';
+        echo '<div class="single-post-excerpt fadeUpElement">';
         the_field('topix_text');
         echo '</div>';
     
@@ -48,7 +48,7 @@
 
         // Display the view more button if the post has content
         if ( get_the_content() != '' ) :
-          echo '<button id="view-more">VIEW MORE</button>';
+          echo '<button id="view-more" class="fadeUpElement">VIEW MORE</button>';
         endif;
 
       endwhile;
@@ -58,7 +58,7 @@
     ?>
 
     <!-- Display the back button -->
-    <div class="back-button">
+    <div class="back-button fadeUpElement">
       <a href="javascript:history.back()">BACK TO LIST</a>
     </div>
   </div>

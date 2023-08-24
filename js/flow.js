@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  
+  if (isIOS) {
+    document.body.classList.add('ios-device');
+  }
   // GSAPのタイムラインを初期化
   gsap.registerPlugin(ScrollTrigger);
 

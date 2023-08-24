@@ -83,7 +83,7 @@
     <div id="btnNav" class="btm__nav__container">
       <div class="btm__nav__inner">
         <ul class="btm__nav__box">
-          <li>
+          <li class="fadeUpItem">
             <a href="<?php echo esc_url(home_url('/portfolio')); ?>">
               <p>PORTFOLIO</p>
               <picture>
@@ -92,7 +92,7 @@
               </picture>
             </a>
           </li>
-          <li>
+          <li class="fadeUpItem">
             <a href="<?php echo esc_url(home_url('/flow')); ?>">
               <p>FLOW</p>
               <picture>
@@ -101,7 +101,7 @@
               </picture>
             </a>
           </li>
-          <li>
+          <li class="fadeUpItem">
             <a href="<?php echo esc_url(home_url('/inquiry')); ?>">
               <p>INQUIRY</p>
               <picture>
@@ -113,7 +113,7 @@
         </ul>
         <div class="swiper-btn-nav btm__nav__box__sp">
           <div class="swiper-wrapper">        
-              <div class="swiper-slide">
+              <div class="swiper-slide fadeUpItem">
                 <a href="<?php echo esc_url(home_url('/portfolio')); ?>">
                   <p>PORTFOLIO</p>
                   <picture>
@@ -122,7 +122,7 @@
                   </picture>
                 </a>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide fadeUpItem">
                 <a href="<?php echo esc_url(home_url('/flow')); ?>">
                   <p>FLOW</p>
                   <picture>
@@ -131,7 +131,7 @@
                   </picture>
                 </a>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide fadeUpItem">
                 <a href="<?php echo esc_url(home_url('/inquiry')); ?>">
                   <p>INQUIRY</p>
                   <picture>
@@ -141,11 +141,11 @@
                 </a>
               </div>
           </div>
-          <div class="swiper-button-prev swiper-button"></div>
-          <div class="swiper-button-next swiper-button"></div>
+          <div class="swiper-button-prev swiper-button fadeUpItem"></div>
+          <div class="swiper-button-next swiper-button fadeUpItem"></div>
         </div>
-        <p class="btm__nav__text__01">PUBLIC & PRIVATE  SENSE OF THE SEASON  BLANK SPACE & FLEXIBLE</p>
-        <p class="btm__nav__text__02">Architect and creators.</p>
+        <p class="btm__nav__text__01 fadeUpItem">PUBLIC & PRIVATE  SENSE OF THE SEASON  BLANK SPACE & FLEXIBLE</p>
+        <p class="btm__nav__text__02 fadeUpItem">Architect and creators.</p>
       </div>
     </div>
 
@@ -164,7 +164,7 @@
     if ($the_query->have_posts()) {
         while ($the_query->have_posts()) {
             $the_query->the_post();
-            echo '<div class="swiper-slide">';
+            echo '<div class="swiper-slide fadeUpItem">';
             echo '<div class="top-topix-post">';
 
             echo '<div class="top-topix-post-title">';
@@ -185,13 +185,13 @@
     wp_reset_postdata();
     ?>
   </div>
-  <div class="scrollbar-grid">
+  <div class="scrollbar-grid fadeUpItem">
     <div></div>
     <div class="swiper-scrollbar"></div>
   </div>
 </div>
 
-    <p class="top-topix-btn">
+    <p class="top-topix-btn fadeUpItem">
     <a href="<?php echo esc_url( home_url( '/topix' ) ); ?>">VIEW MORE</a>
     </p>
 </div>

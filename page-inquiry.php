@@ -25,14 +25,14 @@
 <div class="inquiry__contents">
   <div class="inquiry__contents__inner">
     <p class="inquiry__tel">
-      <a href="tel:090-4458-0505">090-4458-0505</a>
+      <a href="tel:090-4458-0505" class="sliceTextFadeUp">090-4458-0505</a>
     </p>
-    <p class="inquiry__contents__text">お問い合わせ</p>
+    <p class="inquiry__contents__text sliceTextFadeUp">お問い合わせ</p>
   </div>
 </div>
 
 <div class="contact__form">
-  <div class="contact__form__inner">
+  <div class="contact__form__inner fadeUpElement">
 <?php
   echo do_shortcode('[contact-form-7 id="248481a" title="お問い合わせフォーム"]');
 ?>

@@ -2,8 +2,10 @@ document.body.style.overflow = "hidden";
 let firstLoadDelayApplied = false;
 
 document.addEventListener("DOMContentLoaded", function () {
-  const firstSlideImage = document.querySelector(".swiper-slide:first-child .vertical-slider-img");
-  firstSlideImage.classList.add('animated');
+  const firstSlideImage = document.querySelector(
+    ".swiper-slide:first-child .vertical-slider-img"
+  );
+  firstSlideImage.classList.add("animated");
 
   const loadingElement = document.querySelector(".loading");
   const bodyElement = document.body;
@@ -13,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
       loadingElement.style.display = "none";
-    }, 3600);
+    }, 3000);
   }
 
   setTimeout(function () {
     bodyElement.style.overflow = "initial";
-  }, 3600);
+  }, 3000);
 
   function setHeight() {
     let vh = window.innerHeight * 0.01;
@@ -42,14 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
       slideChangeTransitionStart: function () {
         resetProgressBars();
         updateProgressBar(this.activeIndex);
-        setTimeout(() => { 
-          const allSlideImages = document.querySelectorAll('.vertical-slider-img');
-          const currentSlideImg = this.slides[this.activeIndex].querySelector(".vertical-slider-img");
-          allSlideImages.forEach(img => {
-              img.classList.remove('animated');
-              currentSlideImg.classList.add('animated');
+        setTimeout(() => {
+          const allSlideImages = document.querySelectorAll(
+            ".vertical-slider-img"
+          );
+          const currentSlideImg = this.slides[this.activeIndex].querySelector(
+            ".vertical-slider-img"
+          );
+          allSlideImages.forEach((img) => {
+            img.classList.remove("animated");
+            currentSlideImg.classList.add("animated");
           });
-      }, 1000); 
+        }, 1000);
       },
       slideChange: function () {
         const currentSlide = this.slides[this.activeIndex];
@@ -64,12 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
           header.classList.remove("color-white");
         }
 
-        if (this.activeIndex === this.slides.length - 1) {  
-          setTimeout(function() {
-              const scrolldownElement = document.querySelector(".swiper-slide:last-child .scrolldown1");
-              scrolldownElement.style.opacity = 1;
-          }, 5000);  
-      }
+        if (this.activeIndex === this.slides.length - 1) {
+          setTimeout(function () {
+            const scrolldownElement = document.querySelector(
+              ".swiper-slide:last-child .scrolldown1"
+            );
+            scrolldownElement.style.opacity = 1;
+          }, 5000);
+        }
       },
     },
   });
@@ -99,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (idx === index) {
         if (idx === 0 && !firstLoadDelayApplied) {
           progressBar.style.transition = "width 5s linear 2.5s";
-          firstLoadDelayApplied = true; 
+          firstLoadDelayApplied = true;
         } else {
           progressBar.style.transition = "width 5s linear 0s";
         }
@@ -117,6 +125,34 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0,
   };
 
+  const wrapTextWithSpans = (element) => {
+    let wrappedHtml = '';
+    Array.from(element.textContent).forEach((char, idx) => {
+      const delay = 40 * idx + 'ms';
+      wrappedHtml += `<span style="--delay: ${delay}">${char}</span>`;
+    });
+    element.innerHTML = wrappedHtml;
+  };
+
+  const scrollOpenElements = document.querySelectorAll(".scrollOpen");
+  scrollOpenElements.forEach(wrapTextWithSpans);
+
+  const fadeUpItems = document.querySelectorAll(".fadeUpItem");
+const fadeUpObserverCallback = (entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("fadeUpItemVisit");
+            fadeUpObserver.unobserve(entry.target); 
+        }
+    });
+};
+
+const fadeUpObserver = new IntersectionObserver(fadeUpObserverCallback, observerOptions);
+
+fadeUpItems.forEach((element) => {
+    fadeUpObserver.observe(element);
+});
+
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.target.id === "offZindex") {
@@ -128,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".header").classList.remove("header-small");
       }
 
-      // animatedElements のみに visible クラスを付与する
       if (
         entry.isIntersecting &&
         entry.target.classList.contains("scrollOpen")
@@ -168,5 +203,4 @@ document.addEventListener("DOMContentLoaded", function () {
       draggable: true,
     },
   });
-
 });

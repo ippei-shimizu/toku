@@ -8,10 +8,10 @@
 
       echo '<div class="single-post-title-box">';
       echo '<div class="single-post-title-box-inner">';
-      echo '<h2 class="single-post-title">'; 
+      echo '<h2 class="single-post-title sliceTextFadeUp">'; 
       the_title();
       echo '</h2>';
-      echo '<p class="single-post-title-sub">' . get_field('year_of_city') . '</p>'; 
+      echo '<p class="single-post-title-sub sliceTextFadeUp">' . get_field('year_of_city') . '</p>'; 
       echo '</div>';
       echo '</div>';
         
@@ -25,7 +25,7 @@
           the_content();
         echo '</div>';
 
-        echo '<div class="single-post-title-box-bottom">';
+        echo '<div class="single-post-title-box-bottom fadeUpElement">';
         echo '<h2 class="single-post-title">'; 
         the_title();
         echo '</h2>';

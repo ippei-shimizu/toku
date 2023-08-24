@@ -29,7 +29,7 @@
   if ($paged == 1): ?>
 <div class="portfolio__content">
   <div class="portfolio__inner">
-    <p>家は暮らしはじめてから変化をつづけ、少しずつ自分スタイルにしていくもの。<br>
+    <p class="sliceTextFadeUp">家は暮らしはじめてから変化をつづけ、少しずつ自分スタイルにしていくもの。<br>
 自分の大好きなものや素材。音や匂い。たくさんの要素があるはず。<br>
 好きなものだけに囲まれた暮らしにするために<br>
 それを描いていけるだけの絶妙な余白を残しておく事。<br>
@@ -66,7 +66,7 @@ endif; ?>
 			the_post();
 
 			// Begin post container
-			echo '<div class="archive-post-portfolio archive-post">';
+			echo '<div class="archive-post-portfolio archive-post fadeUpElement">';
 
 			// Display the post thumbnail
 			if ( has_post_thumbnail() ) : ?>
@@ -96,7 +96,7 @@ endif; ?>
 ?>
     </div>
 
-<div class="archive-pagenation">
+<div class="archive-pagenation fadeUpElement">
 <?php
 echo '<div class="prev-page">';
 previous_posts_link( '' );

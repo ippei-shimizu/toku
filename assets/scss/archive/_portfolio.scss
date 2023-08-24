@@ -6,14 +6,17 @@
     padding: 130px 16px 92px;
   }
   p {
-    font-family: $family-A-OTF-GothicMB101Pro-Light;
-    font-size: 20px;
-    letter-spacing: 0.2em;
-    line-height: 3;
     text-align: center;
-    color: #fff;
-    @include media(bp760) {
-      font-size: 10px;
+    span {
+      font-family: $family-A-OTF-GothicMB101Pro-Light;
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      line-height: 3;
+      text-align: center;
+      color: #fff;
+      @include media(bp760) {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -125,13 +128,22 @@
 .archive-post-thumbnail {
   height: 56.3vw;
   max-height: 768px;
+  overflow: hidden;
   @include media(bp760) {
     height: 93.3vw;
+  }
+  a {
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
   }
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.07, 0.06, 0.7);
   }
 }
 

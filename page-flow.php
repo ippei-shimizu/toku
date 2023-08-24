@@ -18,8 +18,8 @@
 
 <div class="flow__contents">
   <div class="flow__contents__inner">
-    <h2 class="flow__contents__title">あなたの理想ができるまで。</h2>
-    <p class="flow__contents__text">until your dream is achieved.</p>
+    <h2 class="flow__contents__title sliceTextFadeUp">あなたの理想ができるまで。</h2>
+    <p class="flow__contents__text sliceTextFadeUp">until your dream is achieved.</p>
   </div>
 </div>
 
@@ -74,8 +74,16 @@
         </div>
       </div>
     </div>
-    <div class="flow__bg">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-bg-01.png" width="1368px" height="1286px" alt="製図">
+    <div class="flow__bg__01 flow__bg">
+    <?php 
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+if (strpos($user_agent, 'iPhone') !== false || strpos($user_agent, 'iPad') !== false || strpos($user_agent, 'iPod') !== false) {
+?>
+<img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-bg-01.png" width="1368px" height="1286px" alt="製図">
+<?php 
+} 
+?>
     </div>
     <div class="flow__list__item">
       <div class="flow__list__box">
@@ -146,8 +154,17 @@
         </div>
       </div>
     </div>
-    <div class="flow__bg flow__bg__02">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-bg-02.png" width="1368px" height="1286px" alt="製図">
+    <div class="flow__bg__02 flow__bg">
+    <?php 
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+if (strpos($user_agent, 'iPhone') !== false || strpos($user_agent, 'iPad') !== false || strpos($user_agent, 'iPod') !== false) {
+?>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flow-bg-02.png" width="1368px" height="1286px" alt="製図">
+<?php 
+} 
+?>
+
     </div>
     <div class="flow__list__item">
       <div class="flow__list__box">
@@ -219,3 +236,6 @@
 </div>
 
 <?php get_footer(); ?>
+<script>
+
+</script>

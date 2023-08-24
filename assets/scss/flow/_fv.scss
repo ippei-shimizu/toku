@@ -69,3 +69,24 @@
     }
   }
 }
+
+.sliceTextFadeUp {
+  span {
+    display: inline-block;
+    transform: translate3d(0, 2rem, 0);
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform;
+  }
+  &.openPageTitle {
+    span {
+      transition-timing-function: linear, cubic-bezier(0.12, 0.86, 0.3, 1) !important;
+      transition-duration: 1500ms, 2300ms !important;
+      transition-property: opacity, transform !important;
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) !important;
+      transition-delay: var(--delay) !important;
+      visibility: visible;
+    }
+  }
+}

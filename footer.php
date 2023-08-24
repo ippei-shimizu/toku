@@ -2,7 +2,7 @@
 <?php
 if ( !is_front_page() ) :
 ?>
-  <div class="page__footer__nav">
+  <div class="page__footer__nav fadeUpElement">
     <div class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>">
       </a>

@@ -13,6 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  const fadeUpElements = document.querySelectorAll(".fadeUpElement");
+  fadeUpElements.forEach(el => {
+    gsap.set(el, { opacity: 0 });
+
+    gsap.to(el, {
+      opacity: 1,
+      duration: 1.8, 
+      ease: "cubic-bezier(0.12, 0.86, 0.3, 1)",
+      scrollTrigger: {
+        trigger: el, 
+        start: 'top 75%', 
+        toggleActions: "play none none none", 
+      },
+    });
+  });
+
   hamburger.addEventListener("click", toggleMenu);
 
   profileLink.addEventListener("click", function () {

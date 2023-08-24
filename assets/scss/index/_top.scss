@@ -116,3 +116,38 @@
 #verticalSlider05 {
   position: relative;
 }
+
+.spliceTextFadeUp span {
+  opacity: 0;
+  transform: translateY(5rem);
+  display: inline-block; 
+  transition: all 2s ease;
+  transition-delay: var(--delay);
+}
+
+.scrollOpen {
+  span {
+    display: inline-block;
+    opacity: 0;
+    will-change: opacity, transform;
+    transition-timing-function: linear, cubic-bezier(0.12, 0.86, 0.3, 1);
+    transition-duration: 2000ms, 2800ms;
+    transition-property: opacity, transform ;
+    transform: translate3d(0, 5rem, 0);
+    transition-delay: var(--delay);
+  }
+  &.visible {
+    span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.fadeUpItem {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1) .3s;
+  &.fadeUpItemVisit {
+    opacity: 1;
+  }
+}

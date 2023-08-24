@@ -10,24 +10,24 @@
 .loading.loadingOpen {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1.4s, visibility 2s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1.4s;
+  transition: opacity 1.4s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1.6s, visibility 1.4s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1.6s;
 }
 .loading.loadingOpen .loading__logo {
   opacity: 1;
   visibility: visible;
-  transition: opacity 2s cubic-bezier(0.25, 0.07, 0.06, 0.7), visibility 2s cubic-bezier(0.25, 0.07, 0.06, 0.7);
+  transition: opacity 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7), visibility 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7);
 }
 @media screen and (max-width:760px) {
   .loading.loadingOpen .sp-loading-logo-text {
     opacity: 1;
     visibility: visible;
-    transition: opacity 2s cubic-bezier(0.25, 0.07, 0.06, 0.7), visibility 2s cubic-bezier(0.25, 0.07, 0.06, 0.7);
+    transition: opacity 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7), visibility 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7);
   }
 }
 .loading.loadingOpen .loading__text {
   opacity: 1;
   visibility: visible;
-  transition: opacity 2s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1s, visibility 2s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1s;
+  transition: opacity 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1s, visibility 1.6s cubic-bezier(0.25, 0.07, 0.06, 0.7) 1s;
 }
 
 .loading__logo {
@@ -783,6 +783,37 @@ body {
   position: relative;
 }
 
+.spliceTextFadeUp span {
+  opacity: 0;
+  transform: translateY(5rem);
+  display: inline-block;
+  transition: all 2s ease;
+  transition-delay: var(--delay);
+}
+
+.scrollOpen span {
+  display: inline-block;
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-timing-function: linear, cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition-duration: 2000ms, 2800ms;
+  transition-property: opacity, transform;
+  transform: translate3d(0, 5rem, 0);
+  transition-delay: var(--delay);
+}
+.scrollOpen.visible span {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.fadeUpItem {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1) 0.3s;
+}
+.fadeUpItem.fadeUpItemVisit {
+  opacity: 1;
+}
+
 .ism {
   position: relative;
   padding-top: 100vh;
@@ -852,17 +883,6 @@ body {
   }
 }
 
-.scrollOpen {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0ms linear, visibility 0ms linear;
-}
-.scrollOpen.visible {
-  transition-delay: 0.6s;
-  visibility: visible;
-  opacity: 1;
-}
-
 .scrolldown1 {
   position: absolute;
   left: 80px;
@@ -871,6 +891,11 @@ body {
   z-index: 1;
   opacity: 0;
   transition: opacity 1s ease;
+}
+@media screen and (max-width:760px) {
+  .scrolldown1 {
+    left: 32px;
+  }
 }
 
 .scrolldown1 span {
@@ -1259,6 +1284,23 @@ body {
   transition-delay: var(--delay) !important;
 }
 
+.sliceTextFadeUp span {
+  display: inline-block;
+  transform: translate3d(0, 2rem, 0);
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+.sliceTextFadeUp.openPageTitle span {
+  transition-timing-function: linear, cubic-bezier(0.12, 0.86, 0.3, 1) !important;
+  transition-duration: 1500ms, 2300ms !important;
+  transition-property: opacity, transform !important;
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+  transition-delay: var(--delay) !important;
+  visibility: visible;
+}
+
 .flow__contents__inner {
   padding: 384px 40px;
   display: flex;
@@ -1345,6 +1387,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-DeBold";
   opacity: 0;
   visibility: hidden;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__num {
@@ -1367,6 +1410,7 @@ body {
   background-color: #fff;
   position: relative;
   margin-bottom: 82px;
+  transition: width 2s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__border {
@@ -1399,6 +1443,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-DeBold";
   opacity: 0;
   visibility: hidden;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__title {
@@ -1414,6 +1459,7 @@ body {
   margin: 14px 0 56px;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__sub {
@@ -1430,6 +1476,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-Light";
   opacity: 0;
   visibility: hidden;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__text {
@@ -1493,6 +1540,58 @@ body {
   color: #4d4d4d;
 }
 
+.flow__bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flow__bg::before {
+  content: "";
+  background: linear-gradient(180deg, rgb(4, 0, 0) 0%, rgba(4, 0, 0, 0) 100%);
+  width: 100%;
+  height: 432px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+@media screen and (max-width:760px) {
+  .flow__bg::before {
+    height: 80px;
+  }
+}
+.flow__bg::after {
+  content: "";
+  background: linear-gradient(0deg, rgb(4, 0, 0) 0%, rgba(4, 0, 0, 0) 100%);
+  width: 100%;
+  height: 432px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+@media screen and (max-width:760px) {
+  .flow__bg::after {
+    height: 80px;
+  }
+}
+
+.flow__bg__01 {
+  background-image: url(../assets/images/flow-bg-01.png);
+  background-attachment: fixed;
+}
+body.ios-device .flow__bg__01 {
+  background-image: none;
+}
+
+.flow__bg__02 {
+  background-image: url(../assets/images/flow-bg-02.png);
+  background-attachment: fixed;
+}
+body.ios-device .flow__bg__02 {
+  background-image: none;
+}
+
 .inquiry__contents__inner {
   padding: 394px 0;
   display: flex;
@@ -1521,7 +1620,7 @@ body {
 }
 
 .inquiry__contents__text {
-  font-family: 16px;
+  font-size: 16px;
   letter-spacing: 0.26em;
   font-family: "A-OTF-GothicMB101Pro-Light";
   color: #fff;
@@ -1757,6 +1856,9 @@ p.form__message {
   }
 }
 .portfolio__inner p {
+  text-align: center;
+}
+.portfolio__inner p span {
   font-family: "A-OTF-GothicMB101Pro-Light";
   font-size: 20px;
   letter-spacing: 0.2em;
@@ -1765,7 +1867,7 @@ p.form__message {
   color: #fff;
 }
 @media screen and (max-width:760px) {
-  .portfolio__inner p {
+  .portfolio__inner p span {
     font-size: 10px;
   }
 }
@@ -1888,16 +1990,21 @@ p.form__message {
 .archive-post-thumbnail {
   height: 56.3vw;
   max-height: 768px;
+  overflow: hidden;
 }
 @media screen and (max-width:760px) {
   .archive-post-thumbnail {
     height: 93.3vw;
   }
 }
+.archive-post-thumbnail a:hover img {
+  transform: scale(1.05);
+}
 .archive-post-thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.07, 0.06, 0.7);
 }
 
 .archive-post-title a {
@@ -2091,25 +2198,14 @@ p.form__message {
   display: block;
   position: relative;
 }
-.topix__archive__container .archive-post-thumbnail a:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transition: opacity 0.4s ease;
-}
-.topix__archive__container .archive-post-thumbnail a:hover::before {
-  opacity: 0.4;
+.topix__archive__container .archive-post-thumbnail a:hover img {
+  transform: scale(1.05);
 }
 .topix__archive__container .archive-post-thumbnail a img {
   width: 100%;
   height: 22vw;
   object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.07, 0.06, 0.7);
 }
 .topix__archive__container .archive-post-meta {
   display: flex;

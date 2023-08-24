@@ -18,7 +18,7 @@
 
 <div class="topix__archive__container">
 <div class="archive-title-wrap">
-	<div class="archive-category">
+	<div class="archive-category fadeUpElement">
 <?php
 $terms = get_terms( array(
 	'taxonomy'   => 'topix_category',
@@ -53,7 +53,7 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 			the_post();
 
 			// Begin post container
-			echo '<div class="archive-post-topix archive-post">';
+			echo '<div class="archive-post-topix archive-post fadeUpElement">';
 
 			// Display the post thumbnail
 			if ( has_post_thumbnail() ) : ?>
@@ -88,7 +88,7 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 ?>
 
 	</div>
-<div class="archive-pagenation">
+<div class="archive-pagenation fadeUpElement">
 		<?php
 		echo '<div class="prev-page">';
 		previous_posts_link( 'prev' );

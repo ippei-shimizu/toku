@@ -129,10 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let wrappedHtml = '';
     Array.from(element.textContent).forEach((char, idx) => {
       const delay = 40 * idx + 'ms';
-      wrappedHtml += `<span style="--delay: ${delay}">${char}</span>`;
+      const content = (char === ' ') ? '&nbsp;' : char;
+      wrappedHtml += `<span style="--delay: ${delay}">${content}</span>`;
     });
     element.innerHTML = wrappedHtml;
   };
+  
 
   const scrollOpenElements = document.querySelectorAll(".scrollOpen");
   scrollOpenElements.forEach(wrapTextWithSpans);

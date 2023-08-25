@@ -364,7 +364,7 @@ body {
   height: 1.4px;
   background-color: #000;
   margin: 4px 0;
-  transition: transform 1.6s cubic-bezier(0.65, 0.07, 0.06, 1.01), background-color 1.6s cubic-bezier(0.65, 0.07, 0.06, 1.01);
+  transition: transform 0.8s cubic-bezier(0.65, 0.07, 0.06, 1.01), background-color 0.8s cubic-bezier(0.65, 0.07, 0.06, 1.01);
 }
 
 .page-header {
@@ -1387,7 +1387,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-DeBold";
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition: opacity 1.4s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 1.4s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__num {
@@ -1410,7 +1410,7 @@ body {
   background-color: #fff;
   position: relative;
   margin-bottom: 82px;
-  transition: width 2s cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition: width 1.4s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__border {
@@ -1443,7 +1443,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-DeBold";
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition: opacity 1.4s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 1.4s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__title {
@@ -1459,7 +1459,7 @@ body {
   margin: 14px 0 56px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition: opacity 1.4s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 1.4s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__sub {
@@ -1476,7 +1476,7 @@ body {
   font-family: "A-OTF-GothicMB101Pro-Light";
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 2s cubic-bezier(0.12, 0.86, 0.3, 1);
+  transition: opacity 1.4s cubic-bezier(0.12, 0.86, 0.3, 1), visibility 1.4s cubic-bezier(0.12, 0.86, 0.3, 1);
 }
 @media screen and (max-width:760px) {
   .flow__list__text {

@@ -76,7 +76,7 @@
     <div class="ism__bg">
       <div class="ism__box">
         <h2 class="scrollOpen">理想は等身大だったりする。</h2>
-        <p class="scrollOpen">IT IS AS LARGE AS LIFE WITH THE IDEAL</p>
+        <p class="scrollOpen">IT IS AS LARGE AS LIFE WITH THE IDEAL.</p>
       </div>
     </div>
 

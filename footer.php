@@ -37,7 +37,7 @@ endif;
         </div>
         <div class="company__tel__email">
           <p><a href="tel:090-4458-0505">TEL  ： 090-4458-0505</a></p>
-          <p><a href="mailto:info@toku5.com">MAIL ： info@toku5.com</a></p>
+          <p><a href="mailto:info@toku5.style">MAIL ： info@toku5.style</a></p>
         </div>
       </div>
 

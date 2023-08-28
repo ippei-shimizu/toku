@@ -695,6 +695,7 @@ body {
   font-weight: bold;
   color: #fff;
   position: relative;
+  overflow: hidden;
 }
 .top .vertical-slider__slide picture {
   height: 100%;
@@ -2121,7 +2122,7 @@ p.form__message {
 }
 @media screen and (max-width:760px) {
   .topix__fv {
-    height: 40vh;
+    height: 62vh;
   }
 }
 .topix__fv .page-title {

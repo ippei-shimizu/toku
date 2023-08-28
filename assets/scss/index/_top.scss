@@ -30,6 +30,7 @@
     font-weight: bold;
     color: #fff;
     position: relative;
+    overflow: hidden;
     picture {
       height: 100%;
       width: 100%;
@@ -102,10 +103,10 @@
 
 @keyframes slideImage {
   from {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
   to {
-      transform: translateX(6vw); 
+    transform: translateX(6vw);
   }
 }
 
@@ -120,7 +121,7 @@
 .spliceTextFadeUp span {
   opacity: 0;
   transform: translateY(5rem);
-  display: inline-block; 
+  display: inline-block;
   transition: all 2s ease;
   transition-delay: var(--delay);
 }
@@ -132,7 +133,7 @@
     will-change: opacity, transform;
     transition-timing-function: linear, cubic-bezier(0.12, 0.86, 0.3, 1);
     transition-duration: 2000ms, 2800ms;
-    transition-property: opacity, transform ;
+    transition-property: opacity, transform;
     transform: translate3d(0, 5rem, 0);
     transition-delay: var(--delay);
   }
@@ -146,7 +147,7 @@
 
 .fadeUpItem {
   opacity: 0;
-  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1) .3s;
+  transition: opacity 2s cubic-bezier(0.12, 0.86, 0.3, 1) 0.3s;
   &.fadeUpItemVisit {
     opacity: 1;
   }

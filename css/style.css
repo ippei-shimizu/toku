@@ -467,6 +467,11 @@ body {
 .footer__company {
   margin-right: 142px;
 }
+@media screen and (max-width:1024px) {
+  .footer__company {
+    margin-right: 6px;
+  }
+}
 @media screen and (max-width:760px) {
   .footer__company {
     margin-right: 0;

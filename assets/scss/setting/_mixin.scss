@@ -6,6 +6,7 @@
 }
 //ブレイクポイント
 $breakpoint-up: (
+  "bp1024": "screen and (max-width:1024px)",
   "bp924": "screen and (max-width:924px)",
   "bp760": "screen and (max-width:760px)",
 ) !default;

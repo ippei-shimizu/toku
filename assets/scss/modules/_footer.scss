@@ -54,6 +54,9 @@
 
 .footer__company {
   margin-right: 142px;
+  @include media(bp1024) {
+    margin-right: 6px;
+  }
   @include media(bp760) {
     margin-right: 0;
   }

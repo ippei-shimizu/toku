@@ -2127,7 +2127,7 @@ p.form__message {
 }
 @media screen and (max-width:760px) {
   .topix__fv {
-    height: 62vh;
+    height: 52vh;
   }
 }
 .topix__fv .page-title {

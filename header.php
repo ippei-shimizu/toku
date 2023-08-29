@@ -6,10 +6,7 @@
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
   <title>toku</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.css" integrity="sha512-15OzXDrYC/wTgcjNDIx6+2LiAHCPnS9DiKQj/dhgdRMpdW+W4AoSjxism+gRaDobBaFN+UONPGic1ttu5mpWxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <?php wp_head(); ?>
 </head>
 <body>

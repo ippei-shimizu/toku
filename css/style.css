@@ -2548,6 +2548,24 @@ h6 {
   opacity: 0.6;
 }
 
+.portfolio-back {
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 64px 8px;
+  display: block;
+  width: fit-content;
+  margin: 200px auto 0;
+  border-bottom: 1px solid #fff;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width:760px) {
+  .portfolio-back {
+    font-size: 12px;
+    margin: 100px auto 0;
+    padding: 6px 40px 8px;
+  }
+}
+
 .single__topix__container {
   color: #fff;
 }

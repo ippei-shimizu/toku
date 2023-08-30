@@ -182,3 +182,19 @@ h6 {
 .single-post-content a:hover {
   opacity: 0.6;
 }
+
+.portfolio-back {
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 64px 8px;
+  display: block;
+  width: fit-content;
+  margin: 200px auto 0;
+  border-bottom: 1px solid #fff;
+  letter-spacing: 0.1em;
+  @include media(bp760) {
+    font-size: 12px;
+    margin: 100px auto 0;
+    padding: 6px 40px 8px;
+  }
+}

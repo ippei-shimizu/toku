@@ -15,12 +15,6 @@
       echo '</div>';
       echo '</div>';
         
-          echo '<div class="single-post-thumbnail">';
-            if ( has_post_thumbnail() ) :
-              the_post_thumbnail();
-            endif;
-          echo '</div>';
-        
         echo '<div class="single-post-content-portfolio single-post-content">';
           the_content();
         echo '</div>';
@@ -38,8 +32,7 @@
       echo '<p>No posts found</p>';
     endif;
     ?>
-
-
+<a class="portfolio-back" href="javascript:history.back()">BACK TO LIST</a>
   </div>
 </div>
 
